@@ -17,9 +17,12 @@ We located and evaluated appropriate datasets and cleaned the data for ingestion
 
 **MongoDB**
 
-We wrote Python code (see Jupyter notebook file 'Make_DB_file_v1a.ipynb') to create a MongoDB database and populate it with our data.
+We wrote Python code (see Jupyter notebook file 'Make_DB_file_v1a.ipynb') to create a MongoDB database and populate it with our data.  The PyMongo scripts will load all data sets located in Project_3_Data file.  The PyMongo was writen to be able to add multiple new features and files by adding a file path and var name for each new file needing loading.  The notebook will print out meta examples of each file and their corresponding structures for purposes of the API developer and others understanding. 
 
-(further discussion here)
+Step 1: Imports libraries and creates the mongodb client as well as database is named.  
+Step 2: Loads all the corresponding files through a for loop. This is the step where we can add any feature or other file in with one line of code.  
+Step 3: Prints out feature collections and one document meta
+Step 4: Merges the the feature files into one Json for API cosumption. Prints out a success measure and top one record to show structure of final merged features file.  
 
 **Flask API**
 
