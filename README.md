@@ -12,6 +12,18 @@ This project is a full-stack web application that examines the relationship betw
 **Data Sourcing and Cleaning**
 
 We located and evaluated appropriate datasets and cleaned the data for ingestion into the database layer.
+We wanted to study the effects of environmental pollution on the health of residents. We wanted to study these effects locally, so we chose Minnesota and we further divided the state into counties. After narrowing down, we concluded to include asthma and cancer as the ailments. We also included the healthoutcome and healthfactors of each county which are calculated by County Health Rankings & Roadmaps (CHR&R), University of Wisconsin Population Health Institute. The datasets of the healthoutcome and healthfactors included Z-scores which is a right measure to compare.
+
+ We extracted four datasets for our study. These are as following:
+1. Asthma hospitalization rates for 2018-2020 by county
+2. Cancer rates by county 2015-2019
+3. Health Outcomes and Factors Rankings 2023
+4.
+5.
+   The steps taken in data cleaning:
+1. We extracted the csv files of asthma data and cancer rate data and transformed them into dataframes using pandas(python). The same was done to excel file of healthoutcomes.
+2. We looked at all the columns in the dataframe. We looked for null values, dropped the columns and renamed columns.
+3. We jsonified the data to be saved in MongoDB.
 
 (more discussion here)
 
