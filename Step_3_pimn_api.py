@@ -17,18 +17,19 @@ def geoJSON_format(dataset):
     for i in dataset:
         # get values
         registry_ID = i["REGISTRY_ID"]
-        site_name = i["PRIMARY_NAME"]
-        site_address = i["LOCATION_ADDRESS"]
+        site_name = i["SITE PRIMARY NAME"]
+        site_address = i["SITE_ADDRESS"]
         site_type = i["SITE_TYPE_NAME"]
         interest_types = i["INTEREST_TYPES"]
+        county_name = i["COUNTY_NAME"]
         if "," in interest_types:
             interest_types = interest_types.split(", ")
-        lat = i["LATITUDE83"]
-        lon = i["LONGITUDE83"]
+        lat = i["LATITUDE"]
+        lon = i["LONGITUDE"]
         
         # build geoJSON formatted dataset
         this_point = Point((lon, lat))
-        properties = dict([('reg_ID', registry_ID), ('site_name', site_name), ('site_address', site_address),
+        properties = dict([('reg_ID', registry_ID), ('site_name', site_name), ('site_address', site_address),  ('county_name', county_name),
                        ('site_type', site_type), ('interest_types', interest_types)])
         gj = Feature(geometry=this_point, properties=properties)
                
