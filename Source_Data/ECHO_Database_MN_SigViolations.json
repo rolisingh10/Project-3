@@ -1,0 +1,1822 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.908333,
+                    44.789444
+                ]
+            },
+            "properties": {
+                "FacName": "3M COTTAGE GROVE CENTER",
+                "FacStreet": "10746 INNOVATION ROAD",
+                "FacCity": "COTTAGE GROVE",
+                "FacState": "MN",
+                "RegistryID": "110000423667",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 12,
+                "FacInspectionCount": 22,
+                "FacFormalActionCount": 3,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.2773,
+                    45.96854
+                ]
+            },
+            "properties": {
+                "FacName": "A AND M AGGREGATE",
+                "FacStreet": "2633 HIGHWAY 65",
+                "FacCity": "MORA",
+                "FacState": "MN",
+                "RegistryID": "110030762903",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 3,
+                "FacInspectionCount": 2,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.45801,
+                    45.00897
+                ]
+            },
+            "properties": {
+                "FacName": "AACRON INC",
+                "FacStreet": "2705 CHESHIRE LN.",
+                "FacCity": "PLYMOUTH",
+                "FacState": "MN",
+                "RegistryID": "110000426183",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 10,
+                "FacInspectionCount": 1,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.877448,
+                    43.821441
+                ]
+            },
+            "properties": {
+                "FacName": "ANDERSON COATINGS",
+                "FacStreet": "320 MAIN ST S",
+                "FacCity": "WALTHAM",
+                "FacState": "MN",
+                "RegistryID": "110068732759",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 12,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.463645,
+                    47.583852
+                ]
+            },
+            "properties": {
+                "FacName": "ARROWHEAD LODGE AND RESORT",
+                "FacStreet": null,
+                "FacCity": null,
+                "FacState": "MN",
+                "RegistryID": "110052097985",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 3,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.64975,
+                    45.3387
+                ]
+            },
+            "properties": {
+                "FacName": "ASPEN HILLS WWTF",
+                "FacStreet": "20300 150TH ST",
+                "FacCity": "BIG LAKE",
+                "FacState": "MN",
+                "RegistryID": "110011113543",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 8,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -94.71488,
+                    45.38299
+                ]
+            },
+            "properties": {
+                "FacName": "ASSOCIATED MILK PRODUCERS INC PAYNESVILLE DIV",
+                "FacStreet": "200 W RAILROAD ST",
+                "FacCity": "PAYNESVILLE",
+                "FacState": "MN",
+                "RegistryID": "110000427306",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 3,
+                "FacInspectionCount": 3,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.771008,
+                    46.499567
+                ]
+            },
+            "properties": {
+                "FacName": "BARNUM-WELL #2 ENTRY POINT",
+                "FacStreet": "COUNTY ROAD 6",
+                "FacCity": "BARNUM",
+                "FacState": "MN",
+                "RegistryID": "110008800716",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 7,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.59664,
+                    43.64548
+                ]
+            },
+            "properties": {
+                "FacName": "BEDFORD TECHNOLOGY LLC SITE 2",
+                "FacStreet": "1180 27TH ST",
+                "FacCity": "WORTHINGTON",
+                "FacState": "MN",
+                "RegistryID": "110070246634",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 5,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "2"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -94.47079,
+                    43.67965
+                ]
+            },
+            "properties": {
+                "FacName": "BEEMER COMPANIES",
+                "FacStreet": "1988 -- 135TH ST",
+                "FacCity": "FAIRMONT",
+                "FacState": "MN",
+                "RegistryID": "110069056997",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 1,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.986834,
+                    47.448536
+                ]
+            },
+            "properties": {
+                "FacName": "BEJOU-WELL #2 ENTRY POINT",
+                "FacStreet": "P.O. BOX 2098",
+                "FacCity": "BEJOU",
+                "FacState": "MN",
+                "RegistryID": "110009049564",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 12,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "I"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.341663,
+                    44.946784
+                ]
+            },
+            "properties": {
+                "FacName": "BELTLINE BLVD AND MN-7 DEVELOPMENT",
+                "FacStreet": "INTERSECTION OF BELTLINE BLVD AND MN 7",
+                "FacCity": "SAINT LOUIS PARK",
+                "FacState": "MN",
+                "RegistryID": "110071320382",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 3,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "5"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.49991,
+                    47.3938
+                ]
+            },
+            "properties": {
+                "FacName": "BIG RICE LAKE WWSL",
+                "FacStreet": "WHITE EARTH BAND - MN CHIPPEWA",
+                "FacCity": "WHITE EARTH",
+                "FacState": "MN",
+                "RegistryID": "110031271433",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 8,
+                "FacInspectionCount": 1,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "I"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.28059,
+                    44.31615
+                ]
+            },
+            "properties": {
+                "FacName": "BITUMINOUS MATERIALS LLC - NONMETALLIC",
+                "FacStreet": "680 NORTHWEST 24TH STREET",
+                "FacCity": "FARIBAULT",
+                "FacState": "MN",
+                "RegistryID": "110003745092",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 1,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "3"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.534553,
+                    44.651932
+                ]
+            },
+            "properties": {
+                "FacName": "BROOKHAVEN DEVELOPMENT",
+                "FacStreet": null,
+                "FacCity": null,
+                "FacState": "MN",
+                "RegistryID": "110013073262",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 11,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.35287,
+                    44.78308
+                ]
+            },
+            "properties": {
+                "FacName": "CARMEUSE SAVAGE",
+                "FacStreet": "12051 YOSEMITE AVE",
+                "FacCity": "SAVAGE",
+                "FacState": "MN",
+                "RegistryID": "110001442528",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 5,
+                "FacInspectionCount": 2,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.890117,
+                    45.037929
+                ]
+            },
+            "properties": {
+                "FacName": "CEDAR TERRACE MOBILE HOME PARK",
+                "FacStreet": null,
+                "FacCity": null,
+                "FacState": "MN",
+                "RegistryID": "110013070933",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 11,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.38268,
+                    45.83135
+                ]
+            },
+            "properties": {
+                "FacName": "CENTRAL SPECIALTIES INC-TEMPORARY GRAVEL LOCATIONS STATEWIDE",
+                "FacStreet": "6325 COUNTY RD 87 SW",
+                "FacCity": "ALEXANDRIA",
+                "FacState": "MN",
+                "RegistryID": "110070050914",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 6,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.29019,
+                    47.538571
+                ]
+            },
+            "properties": {
+                "FacName": "CLIFF DWELLER",
+                "FacStreet": null,
+                "FacCity": null,
+                "FacState": "MN",
+                "RegistryID": "110052157811",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 2,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.040674,
+                    44.887509
+                ]
+            },
+            "properties": {
+                "FacName": "CONCORD STREET PIPE JACKING",
+                "FacStreet": "CONCORD ST",
+                "FacCity": "SOUTH SAINT PAUL",
+                "FacState": "MN",
+                "RegistryID": "110071320515",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 2,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "1"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.36472,
+                    46.8444
+                ]
+            },
+            "properties": {
+                "FacName": "COON'S AGGREGATE SUPPLY CO LLC",
+                "FacStreet": "4607 CANOSIA ROAD",
+                "FacCity": "SAGINAW",
+                "FacState": "MN",
+                "RegistryID": "110041957512",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 8,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.642739,
+                    44.068384
+                ]
+            },
+            "properties": {
+                "FacName": "CURRIE",
+                "FacStreet": "HIGHWAY 30",
+                "FacCity": "CURRIE",
+                "FacState": "MN",
+                "RegistryID": "110008810876",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 10,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.494838,
+                    43.499823
+                ]
+            },
+            "properties": {
+                "FacName": "EMMONS",
+                "FacStreet": "SEC 32 T101N R22W",
+                "FacCity": "EMMONS",
+                "FacState": "MN",
+                "RegistryID": "110032834495",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 7,
+                "FacInspectionCount": 1,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -94.16574,
+                    43.761785
+                ]
+            },
+            "properties": {
+                "FacName": "EROSION CONTROL PLUS INC",
+                "FacStreet": "524 MAIN ST S",
+                "FacCity": "WINNEBAGO",
+                "FacState": "MN",
+                "RegistryID": "110070013798",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 1,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "1"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.5604,
+                    45.2996
+                ]
+            },
+            "properties": {
+                "FacName": "FIBROMINN BIOMASS POWER PLANT",
+                "FacStreet": "900 INDUSTRY DR",
+                "FacCity": "BENSON",
+                "FacState": "MN",
+                "RegistryID": "110008734085",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 12,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.53882,
+                    45.18104
+                ]
+            },
+            "properties": {
+                "FacName": "FLAME METALS PROCESSING CORPORATION",
+                "FacStreet": "12450 IRONWOOD CIR",
+                "FacCity": "ROGERS",
+                "FacState": "MN",
+                "RegistryID": "110003910732",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 12,
+                "FacInspectionCount": 1,
+                "FacFormalActionCount": 2,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.911451,
+                    46.926706
+                ]
+            },
+            "properties": {
+                "FacName": "FLOODWOOD WWTP",
+                "FacStreet": "702 HICKORY STREET",
+                "FacCity": "FLOODWOOD",
+                "FacState": "MN",
+                "RegistryID": "110039751630",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 5,
+                "FacInspectionCount": 1,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "1"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.4257,
+                    44.79394
+                ]
+            },
+            "properties": {
+                "FacName": "FORTERRA CONCRETE PRODUCTS",
+                "FacStreet": "7070 CRETEX AVE E",
+                "FacCity": "SHAKOPEE",
+                "FacState": "MN",
+                "RegistryID": "110043997002",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 1,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.572664,
+                    44.802599
+                ]
+            },
+            "properties": {
+                "FacName": "GEDNEY, M A",
+                "FacStreet": "2100 STOUGHTON AVE",
+                "FacCity": "CHASKA",
+                "FacState": "MN",
+                "RegistryID": "110008818468",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 5,
+                "FacInspectionCount": 5,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.6499,
+                    47.96201
+                ]
+            },
+            "properties": {
+                "FacName": "GRAND PORTAGE COMMUNITY WATER SYSTEM",
+                "FacStreet": "535 UPPER ROAD",
+                "FacCity": "GRAND PORTAGE",
+                "FacState": "MN",
+                "RegistryID": "110013236177",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 12,
+                "FacInspectionCount": 1,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "I"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.935269,
+                    47.429087
+                ]
+            },
+            "properties": {
+                "FacName": "HIBBING PUBLIC UTILITIES POWER PLANT",
+                "FacStreet": "1902 6TH AVE E",
+                "FacCity": "HIBBING",
+                "FacState": "MN",
+                "RegistryID": "110001442332",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 12,
+                "FacInspectionCount": 3,
+                "FacFormalActionCount": 2,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.21723,
+                    46.88906
+                ]
+            },
+            "properties": {
+                "FacName": "J & D SERVICES OF NORTHERN MINNESOTA",
+                "FacStreet": "5197 LAVAQUE RD",
+                "FacCity": "DULUTH",
+                "FacState": "MN",
+                "RegistryID": "110069155513",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 12,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -91.8691,
+                    47.0631
+                ]
+            },
+            "properties": {
+                "FacName": "JBL SAND AND GRAVEL LLC",
+                "FacStreet": "1849 FOX FARM RD",
+                "FacCity": "TWO HARBORS",
+                "FacState": "MN",
+                "RegistryID": "110070099466",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 7,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.979071,
+                    47.44131
+                ]
+            },
+            "properties": {
+                "FacName": "JC AND J TRUCKING",
+                "FacStreet": "1385 140TH ST",
+                "FacCity": "BEJOU",
+                "FacState": "MN",
+                "RegistryID": "110071075272",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 3,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "I"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.73856,
+                    43.98618
+                ]
+            },
+            "properties": {
+                "FacName": "KASSON WWTP",
+                "FacStreet": "25334 625TH ST",
+                "FacCity": "KASSON",
+                "FacState": "MN",
+                "RegistryID": "110064269269",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 3,
+                "FacInspectionCount": 2,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.572148,
+                    44.319546
+                ]
+            },
+            "properties": {
+                "FacName": "KILKENNY WWTP",
+                "FacStreet": "COUNTY ROAD 3 N",
+                "FacCity": "KILKENNY",
+                "FacState": "MN",
+                "RegistryID": "110069019582",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 6,
+                "FacInspectionCount": 1,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.538759,
+                    44.794944
+                ]
+            },
+            "properties": {
+                "FacName": "KODA BIOMASS PLANT",
+                "FacStreet": "975 3RD AVE W",
+                "FacCity": "SHAKOPEE",
+                "FacState": "MN",
+                "RegistryID": "110040318475",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 12,
+                "FacInspectionCount": 2,
+                "FacFormalActionCount": 4,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -94.413981,
+                    45.390149
+                ]
+            },
+            "properties": {
+                "FacName": "KRAEMER TRUCKING & EXCAVATING INC",
+                "FacStreet": "HIGHWAY 23 & COUNTY ROAD 158",
+                "FacCity": "COLD SPRING",
+                "FacState": "MN",
+                "RegistryID": "110069488370",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 1,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.91282,
+                    47.40838
+                ]
+            },
+            "properties": {
+                "FacName": "KUBENA SAND & GRAVEL",
+                "FacStreet": "3420 19TH AVE E",
+                "FacCity": "HIBBING",
+                "FacState": "MN",
+                "RegistryID": "110022843011",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 9,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -94.8783,
+                    44.9433
+                ]
+            },
+            "properties": {
+                "FacName": "LAKE LILLIAN",
+                "FacStreet": "135TH ST SE",
+                "FacCity": "LAKE LILLIAN",
+                "FacState": "MN",
+                "RegistryID": "110008806104",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 9,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 5,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -91.75893,
+                    47.068906
+                ]
+            },
+            "properties": {
+                "FacName": "LINDBERG PIT",
+                "FacStreet": "387 WESTOVER RD",
+                "FacCity": "TWO HARBORS",
+                "FacState": "MN",
+                "RegistryID": "110070561585",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 11,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -91.615001,
+                    47.160065
+                ]
+            },
+            "properties": {
+                "FacName": "LINDEN GRAVEL SAND & ROCK",
+                "FacStreet": "289 SAWMILL LAKE RD",
+                "FacCity": "TWO HARBORS",
+                "FacState": "MN",
+                "RegistryID": "110070216846",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 2,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.463645,
+                    47.583852
+                ]
+            },
+            "properties": {
+                "FacName": "LODGE OF WHISPERING PINES",
+                "FacStreet": null,
+                "FacCity": null,
+                "FacState": "MN",
+                "RegistryID": "110052248661",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 6,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.63202,
+                    45.0516
+                ]
+            },
+            "properties": {
+                "FacName": "LORETTO-WELL #3 ENTRY POINT",
+                "FacStreet": "ALBERT ST",
+                "FacCity": "LORETTO",
+                "FacState": "MN",
+                "RegistryID": "110008818128",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 2,
+                "FacInspectionCount": 1,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -91.840501,
+                    47.903066
+                ]
+            },
+            "properties": {
+                "FacName": "LOUIS LEUSTEK & SONS INC - NONMETALLIC",
+                "FacStreet": "1715 E SHERIDAN ST",
+                "FacCity": "ELY",
+                "FacState": "MN",
+                "RegistryID": "110001446301",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 6,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.409341,
+                    44.40858
+                ]
+            },
+            "properties": {
+                "FacName": "LUCAN WWTP",
+                "FacStreet": "302 ELM ST",
+                "FacCity": "LUCAN",
+                "FacState": "MN",
+                "RegistryID": "110068041746",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 4,
+                "FacInspectionCount": 3,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.99702,
+                    44.17527
+                ]
+            },
+            "properties": {
+                "FacName": "MANKATO-KASOTA STONE INC",
+                "FacStreet": "818 N WILLOW ST",
+                "FacCity": "MANKATO",
+                "FacState": "MN",
+                "RegistryID": "110003886714",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 4,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.1672,
+                    44.87244
+                ]
+            },
+            "properties": {
+                "FacName": "MATERIALS PROCESSING CORP - M",
+                "FacStreet": "2300 PILOT KNOB RD",
+                "FacCity": "MENDOTA HEIGHTS",
+                "FacState": "MN",
+                "RegistryID": "110003928634",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 12,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.565816,
+                    47.702696
+                ]
+            },
+            "properties": {
+                "FacName": "MDNR SCENIC STATE PARK",
+                "FacStreet": "56956 SCENIC HWY 7",
+                "FacCity": "BIGFORK",
+                "FacState": "MN",
+                "RegistryID": "110006650677",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 9,
+                "FacInspectionCount": 1,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.51561,
+                    45.25554
+                ]
+            },
+            "properties": {
+                "FacName": "METROPOLITAN GRAVEL CO INC -",
+                "FacStreet": "15683 NW JARVIS ST",
+                "FacCity": "ELK RIVER",
+                "FacState": "MN",
+                "RegistryID": "110003821142",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 4,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.647605,
+                    47.273066
+                ]
+            },
+            "properties": {
+                "FacName": "NAYTAHWAUSH WWSL",
+                "FacStreet": "P.O. BOX 418",
+                "FacCity": "NAYTAHWAUSH",
+                "FacState": "MN",
+                "RegistryID": "110012750255",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 7,
+                "FacInspectionCount": 1,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "I"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.082,
+                    47.5112
+                ]
+            },
+            "properties": {
+                "FacName": "NORTHWOOD PANELBOARD COMPANY",
+                "FacStreet": "4409 NORTHWOOD ROAD NORTHWEST",
+                "FacCity": "SOLWAY",
+                "FacState": "MN",
+                "RegistryID": "110000594900",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 8,
+                "FacInspectionCount": 1,
+                "FacFormalActionCount": 2,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -96.71123,
+                    48.84454
+                ]
+            },
+            "properties": {
+                "FacName": "OAK MANOR MOBILE HOME PARK-TREATMENT PLANT",
+                "FacStreet": "3079 340TH AVENUE",
+                "FacCity": "LANCASTER",
+                "FacState": "MN",
+                "RegistryID": "110013074350",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 11,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.714578,
+                    46.405725
+                ]
+            },
+            "properties": {
+                "FacName": "OTTER TAIL LAKE CAMPGROUND",
+                "FacStreet": null,
+                "FacCity": null,
+                "FacState": "MN",
+                "RegistryID": "110052115572",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 2,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.49067,
+                    46.709355
+                ]
+            },
+            "properties": {
+                "FacName": "PALISADE WWTP",
+                "FacStreet": "30509 480TH ST",
+                "FacCity": "PALISADE",
+                "FacState": "MN",
+                "RegistryID": "110039700320",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 5,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.905727,
+                    45.848435
+                ]
+            },
+            "properties": {
+                "FacName": "PINE CITY TOWNSHIP GRAVEL PIT",
+                "FacStreet": "1601 SUNNYSIDE RD",
+                "FacCity": "PINE CITY",
+                "FacState": "MN",
+                "RegistryID": "110015719542",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 1,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.139361,
+                    44.14425
+                ]
+            },
+            "properties": {
+                "FacName": "PLAINVIEW-ELGIN SANITARY DISTRICT WWTP",
+                "FacStreet": "24934 530TH ST",
+                "FacCity": "PLAINVIEW",
+                "FacState": "MN",
+                "RegistryID": "110064599153",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 3,
+                "FacInspectionCount": 4,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -96.022605,
+                    44.929446
+                ]
+            },
+            "properties": {
+                "FacName": "PURIS PROTEINS LLC",
+                "FacStreet": "1864 311TH AVE",
+                "FacCity": "DAWSON",
+                "FacState": "MN",
+                "RegistryID": "110064268563",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 4,
+                "FacInspectionCount": 1,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -94.78588,
+                    47.46858
+                ]
+            },
+            "properties": {
+                "FacName": "REIERSON CONSTRUCTION INC - SHOP PIT",
+                "FacStreet": "6160 MILL ST NE",
+                "FacCity": "BEMIDJI TOWNSHIP",
+                "FacState": "MN",
+                "RegistryID": "110068636783",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 2,
+                "FacInspectionCount": 1,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -94.42992,
+                    44.89613
+                ]
+            },
+            "properties": {
+                "FacName": "REINER CONTRACTING",
+                "FacStreet": "21541 HIGHWAY 7 W",
+                "FacCity": "HUTCHINSON",
+                "FacState": "MN",
+                "RegistryID": "110067717769",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 1,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -96.00548,
+                    46.54814
+                ]
+            },
+            "properties": {
+                "FacName": "RIVER AND WOODS MOBILE HOME PARK",
+                "FacStreet": "23111 CROSS POINT ROAD",
+                "FacCity": "PELICAN RAPIDS",
+                "FacState": "MN",
+                "RegistryID": "110016810879",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 8,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.753229,
+                    43.996546
+                ]
+            },
+            "properties": {
+                "FacName": "RUPP CONSTRUCTION CO INC",
+                "FacStreet": "1711 MAPLE AVE",
+                "FacCity": "SLAYTON",
+                "FacState": "MN",
+                "RegistryID": "110008810894",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 6,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.714578,
+                    46.405725
+                ]
+            },
+            "properties": {
+                "FacName": "SCENIC POINT RESORT",
+                "FacStreet": null,
+                "FacCity": null,
+                "FacState": "MN",
+                "RegistryID": "110052397508",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 7,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.062481,
+                    44.670893
+                ]
+            },
+            "properties": {
+                "FacName": "SKYLINE VILLAGE MOBILE HOME PARK",
+                "FacStreet": null,
+                "FacCity": null,
+                "FacState": "MN",
+                "RegistryID": "110013083411",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 8,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -94.987589,
+                    44.246827
+                ]
+            },
+            "properties": {
+                "FacName": "SKYVIEW MOBILE VILLA",
+                "FacStreet": "VILLA DE MESA DR",
+                "FacCity": "SPRINGFIELD",
+                "FacState": "MN",
+                "RegistryID": "110013084928",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 12,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -94.230123,
+                    44.575734
+                ]
+            },
+            "properties": {
+                "FacName": "STARLAND HB, INC.",
+                "FacStreet": null,
+                "FacCity": null,
+                "FacState": "MN",
+                "RegistryID": "110013073565",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 8,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.196292,
+                    45.15106
+                ]
+            },
+            "properties": {
+                "FacName": "STERICYCLE SPECIALTY WASTE SOLUTIONS",
+                "FacStreet": "2850 100TH CT NE",
+                "FacCity": "BLAINE",
+                "FacState": "MN",
+                "RegistryID": "110020714529",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 5,
+                "FacInspectionCount": 4,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.682565,
+                    45.401422
+                ]
+            },
+            "properties": {
+                "FacName": "TAYLORS FALLS WWTP",
+                "FacStreet": "21000 310TH ST",
+                "FacCity": "TAYLORS FALLS",
+                "FacState": "MN",
+                "RegistryID": "110044900435",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 2,
+                "FacInspectionCount": 3,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.29019,
+                    47.538571
+                ]
+            },
+            "properties": {
+                "FacName": "TEMPERANCE RIVER STATE PARK\/LOWER CAMP",
+                "FacStreet": null,
+                "FacCity": null,
+                "FacState": "MN",
+                "RegistryID": "110052200989",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 2,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.97926,
+                    45.55007
+                ]
+            },
+            "properties": {
+                "FacName": "TITAN LANSING TRANSLOADING LLC - NORTH BRANCH",
+                "FacStreet": "6384 415TH ST",
+                "FacCity": "NORTH BRANCH",
+                "FacState": "MN",
+                "RegistryID": "110067908928",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 1,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.97926,
+                    45.55007
+                ]
+            },
+            "properties": {
+                "FacName": "TITAN LANSING TRANSLOADING LLC - NORTH BRANCH",
+                "FacStreet": "6384 415TH ST.",
+                "FacCity": "NORTH BRANCH",
+                "FacState": "MN",
+                "RegistryID": "110043996334",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 12,
+                "FacInspectionCount": 1,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -96.056733,
+                    46.301027
+                ]
+            },
+            "properties": {
+                "FacName": "VALMET DBA STONEL-SOFTENER",
+                "FacStreet": "26271 US HIGHWAY 59",
+                "FacCity": "FERGUS FALLS",
+                "FacState": "MN",
+                "RegistryID": "110052349721",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 11,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 8,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.54146,
+                    47.52103
+                ]
+            },
+            "properties": {
+                "FacName": "VIRGINIA DEPARTMENT OF PUBLIC UTILITIES",
+                "FacStreet": "620 SOUTH 2ND STREET",
+                "FacCity": "VIRGINIA",
+                "FacState": "MN",
+                "RegistryID": "110001442341",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 12,
+                "FacInspectionCount": 4,
+                "FacFormalActionCount": 2,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.04149,
+                    47.34399
+                ]
+            },
+            "properties": {
+                "FacName": "VOGTS DIRT SERVICE LLC",
+                "FacStreet": "47415 SUNRISE DR",
+                "FacCity": "SOLWAY",
+                "FacState": "MN",
+                "RegistryID": "110041957521",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 2,
+                "FacInspectionCount": 2,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.107532,
+                    47.036542
+                ]
+            },
+            "properties": {
+                "FacName": "WASTE WOOD RECYCLERS LLC",
+                "FacStreet": "8308 JEAN DULUTH RD",
+                "FacCity": "DULUTH",
+                "FacState": "MN",
+                "RegistryID": "110070528510",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 8,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.63578,
+                    45.5964
+                ]
+            },
+            "properties": {
+                "FacName": "WEST BRANCH CONSTRUCTION CO",
+                "FacStreet": "3527 BRANCH RD",
+                "FacCity": "PRINCETON",
+                "FacState": "MN",
+                "RegistryID": "110003917995",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 1,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.858685,
+                    47.085822
+                ]
+            },
+            "properties": {
+                "FacName": "WHITE EARTH WWSL",
+                "FacStreet": "P.O. BOX 418",
+                "FacCity": "WHITE EARTH",
+                "FacState": "MN",
+                "RegistryID": "110014423230",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 4,
+                "FacInspectionCount": 1,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "I"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -94.43507,
+                    45.756353
+                ]
+            },
+            "properties": {
+                "FacName": "WM D SCEPANIAK INC",
+                "FacStreet": "572 4TH ST",
+                "FacCity": "HOLDINGFORD",
+                "FacState": "MN",
+                "RegistryID": "110070917366",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 4,
+                "FacInspectionCount": 1,
+                "FacFormalActionCount": 1,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.365088,
+                    47.312254
+                ]
+            },
+            "properties": {
+                "FacName": "WM J SCHWARTZ & SONS INC - MIDWAY PIT",
+                "FacStreet": "34882 SCENIC HWY",
+                "FacCity": "BOVEY",
+                "FacState": "MN",
+                "RegistryID": "110014334559",
+                "FacSNCFlg": "Y",
+                "FacQtrsWithNC": 1,
+                "FacInspectionCount": 0,
+                "FacFormalActionCount": 0,
+                "FacMapFlg": "Y",
+                "SupOver80CountUsDisp": "0"
+            }
+        }
+    ]
+}
