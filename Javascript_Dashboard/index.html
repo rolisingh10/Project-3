@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Leaflet Step-1</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin="" />
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+</head>
+
+<body>
+
+  <h1>Minnesota Health Dashboard</h1>
+
+  <div id="overlay">
+    <h2>County Information</h2>
+    <select id="Menu">
+      <option value="None">(no country selected)</option>
+    </select>
+    <div id="sample-metadata"></div>
+  </div>
+  
+  <div id="map" style="width:50%;"></div>
+
+  <h3>County Health Parameter</h3>
+      <select id="dropdown">
+        <option value="FIPS">FIPS</option>
+        <option value="Asthma">Asthma rate per 100,000</option>
+        <option value="Cancer">Cancer rate per 100,000</option>
+        <option value="Cases">Number of cases</option>
+        <option value="Population">Population</option>
+        <option value="HLT_Factor_Rank">HLT Factor Rank</option>
+        <option value="HLT_Factor_Z">HLT Factor Z-Score</option>
+        <option value="HLT_Outcome_Rank">HLT Outcome Rank</option>
+        <option value="HLT_Outcome_Z">HLT Outcome Z-Score</option>
+        <!-- Add more options as needed -->
+      </select>
+    <div id="bar" style="width:800px;height:400px;">
+  </div>
+
+
+  <!-- Dropdown Menu -->
+  
+
+    <!-- <div id="map" style="width:800px;height:500px;"></div> -->
+
+  <!--<div class="col-md-5">
+    <div id="bar"style="width:800px;height:400px;"></div>
+  </div> -->
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+  <!-- Heatmap JS -->
+
+  <script type="text/javascript" src="static/js/leaflet-heat.js"></script>
+
+  <!-- Turf (advanced geographical data analysis) -->
+
+  <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+    
+  <!-- D3 JavaScript -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- Our JavaScript -->
+  <script type="text/javascript" src="static/js/logic_2.js"></script>
+  <!-- Plotly -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</body>
+
+</html>
