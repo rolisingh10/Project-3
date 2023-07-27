@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Quick Start - Leaflet</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.0/dist/leaflet.js" integrity="sha512-C7BBF9irt5R7hqbUm2uxtODlUVs+IsNu2UULGuZN7gM+k/mmeG4xvIEac01BtQa4YIkUpp23zZC4wIwuXaPMQA==" crossorigin=""></script>
+
+		<style>
+		#mapid {
+			width: 100%;
+		}
+		.leaflet-popup-content-wrapper {
+			border-radius: 0;
+	    background: black;
+	    color: white;
+	    font-size: 20px;
+		}
+		.leaflet-popup-content {
+			margin: 5px;
+		}
+		.leaflet-popup-tip {
+			background: black;
+		}
+		.leaflet-popup-close-button {
+			display: none;
+		}
+		</style>
+
+
+</head>
+<body>
+
+
+<div id="mapid" style="width:600px;height:400px;"></div>
+<input type="text" id="current_center" />
+<button id="toggleLayer">Toggle</button>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+<script>
+
+	$(document).ready(function() {
+
+		var map = L.map('mapid', {
+			zoomControl : false
+		})
+		.setView([49.25077560316286,-123.08944702148438], 8);
+
+		L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png', {
+			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+		}).addTo(map);
+
+		var popup = L.popup();
+
+		var blackIcon = L.icon({
+			iconUrl: 'map-marker.svg',
+			iconSize: [64,74],
+			iconAnchor: [32,74],
+			popupAnchor: [0,-50]
+		});
+
+		var redIcon = L.icon({
+			iconUrl: 'map-marker-red.svg',
+			iconSize: [64,74],
+			iconAnchor: [32,74],
+			popupAnchor: [0,-50]
+		});
+
+		var geojson = {"type": "FeatureCollection","features": [{"type": "Feature","properties": {},"geometry": {"type": "LineString","coordinates": [[-123.15399169921874,49.49399862898744],[-123.24600219726562,49.44759314103577],[-123.20480346679686,49.36448907111148],[-123.15261840820312,49.32512199104001],[-123.06472778320311,49.30453120854598],[-122.99606323242188,49.35822823332857],[-123.00704956054688,49.40471828253377],[-123.08395385742188,49.431519459737224],[-123.13201904296875,49.41276017251568]]}},{"type": "Feature","properties": {},"geometry": {"type": "Point","coordinates": [-122.93289184570312,49.30990354687672]}},{"type": "Feature","properties": {},"geometry": {"type": "Point","coordinates": [-122.61428833007814,49.47615556684203]}},{"type": "Feature","properties": {},"geometry": {"type": "Point","coordinates": [-123.42315673828124,49.417227319964674]}},{"type": "Feature","properties": {},"geometry": {"type": "Polygon","coordinates": [[[-122.93975830078124,49.485077910741936],[-122.92877197265625,49.41276017251568],[-122.85049438476562,49.36270034165353],[-122.79693603515624,49.41186669423728],[-122.85324096679688,49.46723159720791],[-122.93975830078124,49.485077910741936]]]}}]};
+
+
+		var markers = [];
+		var coordinates = [
+			[49.49399862898744,-123.15399169921874],
+			[49.49399862898744,-124.15399169921874],
+			[50.49399862898744,-124.15399169921874]
+		];
+
+		coordinates.forEach(function(coords) {
+			var marker = L.marker(coords, {
+				icon: blackIcon
+			}).on('mousemove',function(e) {
+				e.target.setIcon(redIcon);
+			}).on('mouseout',function(e) {
+				e.target.setIcon(blackIcon);
+			});
+			markers.push(marker);
+		});
+
+		var featureGroup = L.featureGroup(markers).addTo(map);
+
+		map.fitBounds(featureGroup.getBounds(), {
+			padding: [20,20]
+		});
+
+		var options = {units: 'kilometers'};
+		map.on('mousemove',function(e) {
+			// console.log(e);
+			var from = turf.point([e.latlng.lat, e.latlng.lng]);
+			markers.forEach(function(marker) {
+				var to = turf.point([marker.getLatLng().lat, marker.getLatLng().lng]);
+				var distance = turf.distance(from, to, options);
+				if(distance<100) {
+					marker.setIcon(redIcon);
+				} else {
+					marker.setIcon(blackIcon);
+				}
+			});
+
+		})
+
+		map.on('moveend',function(e) {
+			$('#current_center').val(map.getCenter().lat+','+map.getCenter().lng);
+		});
+
+		$(document).on('click','#toggleLayer',function() {
+			if(map.hasLayer(featureGroup)) {
+				map.removeLayer(featureGroup);
+			} else {
+				featureGroup.addTo(map);
+			}
+		});
+
+		// var addedGeoJSON = L.geoJSON(geojson, {
+		// 	style : function(feature) {
+		// 		return {
+		// 			color: '#000',
+		// 			weight: 0.5
+		// 		}
+		// 	},
+		// 	pointToLayer: function(geoJsonPoint, latlng) {
+		// 		return L.marker(latlng, {
+		// 			icon: blackIcon
+		// 		});
+		// 	},
+		// 	onEachFeature: function(feature, layer) {
+		// 		if(feature.geometry.type==='Point') {
+		// 			layer.bindPopup(feature.geometry.coordinates.join(','));
+		// 		}
+		// 	}
+		// }).addTo(map);
+    //
+		// map.fitBounds(addedGeoJSON.getBounds(), {
+		// 	padding: [20,20]
+		// });
+
+
+	});
+
+</script>
+
+
+
+</body>
+</html>
