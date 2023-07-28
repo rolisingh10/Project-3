@@ -52,7 +52,7 @@ def epa_sites():
     function to get the data back in geoJSON format. Return the entire dataset in geoJSON format."""
     query = {}
     projection = {"_id": 0}
-    epa_frs_data = list(db.epa_frs_data.find(query, projection))
+    epa_frs_data = list(db.modified_final_epa_frs_clean.find(query, projection))
     geodata = geoJSON_format(epa_frs_data)
     return jsonify(geodata)
 
