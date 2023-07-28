@@ -15,14 +15,14 @@ body {
 #overlay {
   position: absolute;
   z-index: 1000;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.5);
   padding: 10px;
   left: 0;
-  margin: 100px;
+  margin: 20px;
   border-radius: 10px;
   box-shadow: 1px 1px 1px grey;
   min-height: 200px;
-  top: 0px;
+  top: 140px;
 
   /*bottom: 0;*/
   /* margin: 0 auto; */
@@ -34,7 +34,8 @@ body {
 }
 
 #sample-metadata {
-  top: 100%;
-  padding: 20px;
+  padding: 0px;
   left:0;
+  top: 20px;
+  margin: 10px;
 }

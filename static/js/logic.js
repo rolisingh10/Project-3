@@ -1,36 +1,28 @@
-// cancerData = [];
-// countiesMN = [];
-// geoData = [];
-
 let dataType = "Cancer";
 
 let countiesMN = [];
 
 //Data import
-d3.json("gz_2010_us_050_00_500k.json").then((importedData) => {
+d3.json("static/gz_2010_us_050_00_500k.json").then((importedData) => {
   let geoData = importedData.features;
   
   countiesMN = geoData.filter(function(data){
     return data.properties.STATE == 27; //State ID for Minnesota is 27
   });
 
-  d3.json("Cancer.json").then((importedData) => {
-    let cancerData = importedData;
-    
-    d3.json("healthoutcome.json(2023)").then((importedData) => {
+    d3.json("static/health_outcomes_0727.json").then((importedData) => {
       let healthData = importedData;
 
-      d3.json("epa_frs_data.json").then((importedData) => {
+      d3.json("static/frs_0727.geojson").then((importedData) => {
         let siteData = importedData;
         populateList()
-        mapMN(countiesMN, cancerData, healthData, siteData)
-      
+        mapMN(countiesMN, healthData, siteData)
       })
     })
-    }
-    )
   }
 )
+
+//Populate the dropdown list on the map
 
 function populateList()
 {
@@ -40,27 +32,31 @@ function populateList()
 }
 };
 
-function updateBarChart(dataArray){
+//Make barchart
 
-  let field = "Cancer"
+function barChart(dataArray){
 
-  if (dataType == "Cancer") {
-    field = "Rate per 100,000";
-    barChart(field);
-  } 
-  else if (dataType == "Health"){
-    field = "HealthOutcome(Z-Score)";
-    barChart(field);
-  }
+let field = "cancer_rate_per_100k"
 
-function barChart(field){
+keys = {FIPS: "FIPS",
+Asthma: "asthma_rate_per_100k",
+Cancer: "cancer_rate_per_100k",
+Cases: "count_of_cases",
+County: "county",
+Population: "county_population",
+HLT_Factor_Rank: "hlt_factor_rank",
+HLT_Factor_Z:"hlt_factor_z",
+HLT_Outcome_Rank: "hlt_outcome_rank",
+HLT_Outcome_Z: "hlt_outcome_z"}
 
-let dataSorted = dataArray.sort((a, b) => b[field] - a[field]);
-top10 = dataSorted.slice(0, 30);
+console.log(keys[dataType])
+
+let dataSorted = dataArray.sort((a, b) => b[keys[dataType]] - a[keys[dataType]]);
+top10 = dataSorted.slice(0, 20);
   
 let trace = {
-    x: top10.map(object => object.County),
-    y: top10.map(object => object[field]),
+    x: top10.map(object => object.county),
+    y: top10.map(object => object[keys[dataType]]),
     type: "bar",
     orientation: "v"
   };
@@ -68,40 +64,27 @@ let trace = {
   let traceData = [trace];
 
   let layout = {
-    title: field
+    title: dataType
     };
 
 Plotly.newPlot("bar", traceData, layout);
 }
-}
 
 //Begin main program
 
-function mapMN(counties, cancer, health, site){
+function mapMN(counties, health, site){
 
-  //console.log(cancer);
-  console.log(counties[0].properties.NAME);
-
-  updateBarChart(cancer);
+  barChart(health);
 
   //Dropdown menu to select county parameter of interest
+
   document.getElementById('dropdown').addEventListener('change', function() {
     dataType = this.value;
-
-    if (dataType == "Health"){
-
-      updateBarChart(health);
-
-    }
-    else if(dataType == "Cancer"){
-
-      updateBarChart(cancer);
-
-    }
-
+    console.log(dataType)
+    barChart(health)
   });
 
-  //Dropdown for county selection on map
+  //Listen for change in dropdown for county selection on map, then make poper changes to map
 
   document.getElementById('Menu').addEventListener('change', function() {
 
@@ -112,40 +95,44 @@ function mapMN(counties, cancer, health, site){
 
     let newCounty = this.value;
 
-    if (newCounty === "None"){
+    if (newCounty !== "None"){
+
+    countiesGeoJSON.eachLayer(function(layer){
+        if (layer.feature.properties.NAME === newCounty){
+          layer.setStyle({fillOpacity: 0.5})
+          myMap.fitBounds(layer.getBounds())
+          let pointsMatch = "";
+          let healthMatch = "";
+                healthMatch = health.filter(function(data){
+                  return data.county === layer.feature.properties.NAME;
+                });
+                pointsMatch = corr.filter(function(data){
+                  return data.county === layer.feature.properties.NAME;
+                });
+              demoDisp = d3.select('#sample-metadata');
+              demoDisp.html(`<b>${layer.feature.properties.NAME} County</b> <br> 
+              Population: ${healthMatch[0]["county_population"]}<br>
+              Total number of sites: ${pointsMatch[0]["Total_number_of_sites"]}<br>
+              FIPS: ${healthMatch[0]["FIPS"]}<br>
+              Asthma rate per 100k: ${healthMatch[0]["asthma_rate_per_100k"]}<br>
+              Cancer rate per 100k: ${healthMatch[0]["cancer_rate_per_100k"]}<br>
+              Asthma ED vistis: ${healthMatch[0]["count_of_cases"]}<br>
+              HLT factor rank: ${healthMatch[0]["hlt_factor_rank"]}<br>
+              HLT factor Z-score: ${healthMatch[0]["hlt_factor_z"]}<br>
+              HLT outcome rank: ${healthMatch[0]["hlt_outcome_rank"]}<br>
+              HLT outcome Z-score: ${healthMatch[0]["hlt_outcome_z"]}
+              `)
+        }
+    })
+  }
+
+    else if (newCounty === "None"){
       countiesGeoJSON.eachLayer(function(layer){
           layer.setStyle({fillOpacity: 0})
         })
         demoDisp = d3.select('#sample-metadata')
         demoDisp.html("")
-      }
-    
-    let ddCancerMatch = "";
-    let ddHealthMatch = "";
-
-    for (let i = 0; i < counties.length; i++) {
-
-      ddCancerMatch = cancer.filter(function(data){
-        return data.County === newCounty;
-      })
-
-      ddHealthMatch = health.filter(function(data){
-        return data.County === newCounty;
-      })
     }
-
-    countiesGeoJSON.eachLayer(function(layer){
-        console.log(layer.feature.properties.NAME)
-        if (layer.feature.properties.NAME === newCounty){
-          layer.setStyle({fillOpacity: 0.5})
-          myMap.fitBounds(layer.getBounds())
-        }
-    })
-    demoDisp = d3.select('#sample-metadata');
-    demoDisp.html(`${newCounty} County<br>
-    Cancer Rate per 100,000: ${ddCancerMatch[0]["Rate per 100,000"]}<br>
-    Health Outcome Z-Score: ${ddHealthMatch[0]["HealthOutcome(Z-Score)"]}
-    `);
   }
   )
 
@@ -154,7 +141,7 @@ function mapMN(counties, cancer, health, site){
   let sites = []
   for (let i = 0; i < site.length; i++) {
     sites.push(
-      L.marker([site[i].LATITUDE83, site[i].LONGITUDE83], {
+      L.marker([site[i].geometry.coordinates[1], site[i].geometry.coordinates[0]], {
         style: function(feature) {
           return {
             color: '#000',
@@ -180,6 +167,41 @@ function mapMN(counties, cancer, health, site){
     minOpacity: 0.5, 
     radius: 10})
 
+  //Data for correlation matrix
+
+  let corr = [];
+
+  counties.forEach(function(layer){
+  
+      let corrHealthMatch = health.filter(function(data){
+        return data.county === layer.properties.NAME;
+      });
+  
+        let points = turf.points(sitePoints);
+        var totalPoints = 0;
+  
+        if(layer.geometry.coordinates[0].length===1) {
+          layer.geometry.coordinates.forEach(function(coords) {
+            var searchWithin = turf.polygon(coords);
+            var ptsWithin = turf.pointsWithinPolygon(points, searchWithin);
+            totalPoints += ptsWithin.features.length;
+          });
+        } else {
+          var searchWithin = turf.polygon(layer.geometry.coordinates);
+          var ptsWithin = turf.pointsWithinPolygon(points, searchWithin);
+          totalPoints += ptsWithin.features.length;
+        }
+        
+        let entry = {}
+        entry["asthma_rate_per_100k"] = corrHealthMatch[0]["asthma_rate_per_100k"];
+        entry["cancer_rate_per_100k"] = corrHealthMatch[0]["cancer_rate_per_100k"];
+        entry["hlt_outcome_z"] = corrHealthMatch[0]["hlt_outcome_z"];
+        entry["Total_number_of_sites"] = totalPoints;
+        entry["county"] = corrHealthMatch[0]["county"]
+        corr.push(entry)
+  
+  })
+
   //Making the county boarders with geoJSON
 
   countiesGeoJSON = L.geoJSON(counties, {
@@ -197,56 +219,28 @@ function mapMN(counties, cancer, health, site){
         })
         layer.setStyle({fillOpacity: 0.5})
         document.getElementById('Menu').selectedIndex=0;
-        let points = turf.points(sitePoints);
-        var totalPoints = 0;
-        let cancerMatch = "";
+        let pointsMatch = "";
         let healthMatch = "";
-							console.log(layer.feature.properties.NAME)
-              for (let i = 0; i < counties.length; i++) {
-
-                cancerMatch = cancer.filter(function(data){
-                  return data.County === layer.feature.properties.NAME;
-                })
-
                 healthMatch = health.filter(function(data){
-                  return data.County === layer.feature.properties.NAME;
+                  return data.county === layer.feature.properties.NAME;
                 });
-
-              };
-              console.log(cancerMatch[0]["Rate per 100,000"]);
-              console.log(healthMatch[0]["HealthOutcome(Z-Score)"]);
-							if(layer.feature.geometry.coordinates[0].length===1) {
-								layer.feature.geometry.coordinates.forEach(function(coords) {
-									var searchWithin = turf.polygon(coords);
-									var ptsWithin = turf.pointsWithinPolygon(points, searchWithin);
-									totalPoints += ptsWithin.features.length;
-								});
-							} else {
-								var searchWithin = turf.polygon(layer.feature.geometry.coordinates);
-								var ptsWithin = turf.pointsWithinPolygon(points, searchWithin);
-								//console.log(ptsWithin)
-								totalPoints += ptsWithin.features.length;
-							}
-              console.log(totalPoints);
+                pointsMatch = corr.filter(function(data){
+                  return data.county === layer.feature.properties.NAME;
+                });
               demoDisp = d3.select('#sample-metadata');
-              demoDisp.html(`${layer.feature.properties.NAME} County<br> 
-              Total number of sites: ${totalPoints}<br>
-              Cancer Rate per 100,000: ${cancerMatch[0]["Rate per 100,000"]}<br>
-              Health Outcome Z-Score: ${healthMatch[0]["HealthOutcome(Z-Score)"]}
+              demoDisp.html(`<b>${layer.feature.properties.NAME} County</b> <br>
+              Population: ${healthMatch[0]["county_population"]}<br> 
+              Total number of sites: ${pointsMatch[0]["Total_number_of_sites"]}<br>
+              FIPS: ${healthMatch[0]["FIPS"]}<br>
+              Asthma rate per 100k: ${healthMatch[0]["asthma_rate_per_100k"]}<br>
+              Cancer rate per 100k: ${healthMatch[0]["cancer_rate_per_100k"]}<br>
+              Asthma ED visits: ${healthMatch[0]["count_of_cases"]}<br>
+              HLT factor rank: ${healthMatch[0]["hlt_factor_rank"]}<br>
+              HLT factor Z-score: ${healthMatch[0]["hlt_factor_z"]}<br>
+              HLT outcome rank: ${healthMatch[0]["hlt_outcome_rank"]}<br>
+              HLT outcome Z-score: ${healthMatch[0]["hlt_outcome_z"]}
               `)
       })
-      // layer.on('mouseout',function() {
-      //   layer.setStyle({fillOpacity: 0})
-      //   demoDisp = d3.select('#sample-metadata');
-      //   demoDisp.html("")
-      // })
-      // layer.on('click', function(){
-      //   countiesGeoJSON.eachLayer(function(layer){
-      //     layer.setStyle({fillOpacity: 0})
-      //     document.getElementById('Menu').selectedIndex=0;
-      //   })
-      //   layer.setStyle({fillOpacity: 0.5})
-      // })
       }
     }
   )
@@ -264,98 +258,18 @@ function mapMN(counties, cancer, health, site){
   let satelite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 	  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
   });
-
-  
-  let epaSites = L.layerGroup(sites);
   
   // Create a baseMaps object.
   let baseMaps = {
     "Street Map": street,
-    "Topographic Map": topo,
-    "Satelite": satelite
+    // "Topographic Map": topo,
+    // "Satelite": satelite
   };
-
-//Using our "fake data" in geojson format
-// let geojson = {
-//   "type": "FeatureCollection",
-//   "features": [
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "coordinates": [
-//           -93.3724637877016,
-//           45.36993222472972
-//         ],
-//         "type": "Point"
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "coordinates": [
-//           -94.10153196179377,
-//           44.698611036565154
-//         ],
-//         "type": "Point"
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "coordinates": [
-//           -92.99759471602371,
-//           44.420863040972336
-//         ],
-//         "type": "Point"
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "coordinates": [
-//           -93.07471274441056,
-//           46.579167842257135
-//         ],
-//         "type": "Point"
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "coordinates": [
-//           -94.0910131487442,
-//           45.85788261695188
-//         ],
-//         "type": "Point"
-//       }
-//     }
-//   ]
-// }
-
-// var addedGeoJSON = L.geoJSON(geojson, {
-//   style : function(feature) {
-//     return {
-//       color: '#000',
-//       weight: 0.5
-//     }
-//   }, 
-//   onEachFeature: function(feature, layer){
-//     layer.bindPopup(`<h3>Lat: ${feature.geometry.coordinates[0]}<h3><h3>Long: ${feature.geometry.coordinates[1]}<h3>`);
-//   }
-//   // pointToLayer: function(geoJsonPoint, latlng) {
-//   //   return L.marker(latlng);
-//   // }
-// });
 
 // Create an overlay object.
 let overlayMaps = {
   "County Lines": countiesGeoJSON,
-  "EPA Sites": epaSites,
+  //"EPA Sites": epaSites,
   //"Fake Data": addedGeoJSON, //You do not need to create a layerGroup if the data are in the same form as addedGeoJSON
   "Heatmap": heat
 };
@@ -372,6 +286,118 @@ let myMap = L.map("map", {
 L.control.layers(baseMaps, overlayMaps, {
   collapsed: false
 }).addTo(myMap);
+
+//Making a correlation matrix
+
+// Dimension of the whole chart. Only one size since it has to be square
+const marginWhole = {top: 10, right: 10, bottom: 10, left: 10},
+sizeWhole = 640 - marginWhole.left - marginWhole.right
+
+// Create the svg area
+const svg = d3.select("#my_dataviz")
+.append("svg")
+.attr("width", sizeWhole  + marginWhole.left + marginWhole.right)
+.attr("height", sizeWhole  + marginWhole.top + marginWhole.bottom)
+.append("g")
+.attr("transform", `translate(${marginWhole.left},${marginWhole.top})`);
+
+
+// What are the numeric variables in this dataset? How many do I have
+const allVar = ["asthma_rate_per_100k", "cancer_rate_per_100k", "hlt_outcome_z", "Total_number_of_sites"]
+const numVar = allVar.length
+
+// Now I can compute the size of a single chart
+mar = 20
+size = sizeWhole / numVar
+
+
+// ----------------- //
+// Scales
+// ----------------- //
+
+// Create a scale: gives the position of each pair each variable
+const position = d3.scalePoint()
+.domain(allVar)
+.range([0, sizeWhole-size])
+
+// Color scale: give me a specie name, I return a color
+const color = d3.scaleOrdinal()
+.domain(["setosa", "versicolor", "virginica" ])
+.range([ "#402D54", "#D18975", "#8FD175"])
+
+
+// ------------------------------- //
+// Add charts
+// ------------------------------- //
+for (i in allVar){
+for (j in allVar){
+
+  // Get current variable name
+  const var1 = allVar[i]
+  const var2 = allVar[j]
+
+  // If var1 == var2 i'm on the diagonal, I skip that
+  if (var1 === var2) { continue; }
+
+  // Add X Scale of each graph
+  xextent = d3.extent(corr, function(d) { return +d[var1] })
+  const x = d3.scaleLinear()
+    .domain(xextent).nice()
+    .range([ 0, size-2*mar ]);
+
+  // Add Y Scale of each graph
+  yextent = d3.extent(corr, function(d) { return +d[var2] })
+  const y = d3.scaleLinear()
+    .domain(yextent).nice()
+    .range([ size-2*mar, 0 ]);
+
+  // Add a 'g' at the right position
+  const tmp = svg
+    .append('g')
+    .attr("transform", `translate(${position(var1)+mar},${position(var2)+mar})`);
+
+  // Add X and Y axis in tmp
+  tmp.append("g")
+    .attr("transform", `translate(0,${size-mar*2})`)
+    .call(d3.axisBottom(x).ticks(3));
+  tmp.append("g")
+    .call(d3.axisLeft(y).ticks(3));
+
+  // Add circle
+  tmp
+    .selectAll("myCircles")
+    .data(corr)
+    .join("circle")
+      .attr("cx", function(d){ return x(+d[var1]) })
+      .attr("cy", function(d){ return y(+d[var2]) })
+      .attr("r", 3)
+      //.attr("fill", function(d){ return color(d.Species)})
+}
+}
+
+
+// ------------------------------- //
+// Add variable names = diagonal
+// ------------------------------- //
+for (i in allVar){
+for (j in allVar){
+  // If var1 == var2 i'm on the diagonal, otherwisee I skip
+  if (i != j) { continue; }
+  // Add text
+  const var1 = allVar[i]
+  const var2 = allVar[j]
+  svg
+    .append('g')
+    .attr("transform", `translate(${position(var1)},${position(var2)})`)
+    .append('text')
+      .attr("x", size/2)
+      .attr("y", size/2)
+      .text(var1)
+      .attr("text-anchor", "middle")
+
+}
+}
+
 
 }; //end of mapMN
 
