@@ -44,4 +44,4 @@ Note: In this particular instance, our database is static and it is not expected
 
 **Interactive Web page with Visualizations**
 
-(discussion here)
+We created an interactive webpage using Javascript and several associated libraries. The D3 library was used to import the .json and .geojson datasets, which contained the county health statistics, the EPA sites, and the Minnesota county boundaries. Leaflet was used to create an interactive map of the Minnesota counties, where the user can select the county of interest and display the health statistics, as well as view a heatmap of the EPA sites. The Turf library is an advacned geospatial analysis library, and was used to determine the number of sites located in each county using their coordinates. The Plotly library was used to build an interactive bar graph where the user can select the health statistic of interest and display these data by county. A third display panel was added to show the correlations between countywide caner rates, asthma rates, health outcome Z-scores, and number of EPA regualted sites. The webpage has been deployed live using GitHub pages.
