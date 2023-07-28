@@ -11,16 +11,19 @@ This project is a full-stack web application that examines the relationship betw
 
 **Data Sourcing and Cleaning**
 
-We located and evaluated appropriate datasets and cleaned the data for ingestion into the database layer. We wanted to study the effects of environmental pollution on the health of residents. We wanted to study these effects locally, so we chose Minnesota and we further divided the state into counties. After narrowing down, we concluded to include asthma and cancer as the ailments. We also included the healthoutcome and healthfactors of each county which are calculated by County Health Rankings & Roadmaps (CHR&R), University of Wisconsin Population Health Institute. The datasets of the healthoutcome and healthfactors included Z-scores which is a right measure to compare.
+We located and evaluated appropriate datasets and cleaned the data for ingestion into the database layer. We wanted to study the effects of environmental pollution on the health of residents. We wanted to study these effects locally, so we chose Minnesota and we further divided the state into counties. After narrowing down, we concluded to include asthma and cancer as the ailments. We also included the health outcome and health factors of each county, which are calculated by County Health Rankings & Roadmaps (CHR&R), University of Wisconsin Population Health Institute. The datasets of the healt houtcome and health factors included Z-scores which is a right measure to compare. We also chose to use the U.S. Environmental Protection Agency (EPA) Federal Registry Service (FRS) website to find EPA-regulated facilities within Minnesota. These sites range from very small quantity generators of air pollutants to community water treatment systems to superfund sites -- but they are all subject to at least one environmental regulation under the purview of the U.S. EPA. 
 
 We extracted four datasets for our study. These are as follows:
 
 Asthma hospitalization rates for 2018-2020 by county
 Cancer rates by county 2015-2019
 Health Outcomes and Factors Rankings 2023
+EPA FRS Sites in Minnesota
 The steps taken in data cleaning:
 
-We extracted the csv files of asthma data and cancer rate data and transformed them into dataframes using pandas(python). The same was done to excel file of healthoutcomes. We looked at all the columns in the dataframe. We looked for null values, dropped the columns and renamed columns. We jsonified the data to be saved in MongoDB.
+We extracted the csv files of asthma data and cancer rate data and transformed them into dataframes using pandas(python). The same was done to excel file of healthoutcomes. We looked at all the columns in the dataframe. We looked for null values, dropped the columns and renamed columns. The EPA dataset was extracted as a csv after a query of the EPA FRS website. The csv file was read into pandas via python and transformed into a dataframe. From there the data needed to be cleaned (certain columns dropped, column names changed, data filtered, etc.). The main cleaning that needed to be done on the EPA site data was to filter down to sites that we believed to be most relevant for the project. The original dataset has over 200,000 sites, and our final dataset has just under 3,000. We filtered out entries with no geographic data, as well as filtering by "Interest Types." Determining which interest types would be most relevant to cancer and asthma rates was largely subjective, and we could spend weeks defining how to best define the sites we think have the greatest impact. 
+
+We jsonified all four of the datasets to be ingested into the MongoDB database. 
 
 **MongoDB**
 
