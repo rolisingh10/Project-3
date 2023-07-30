@@ -290,153 +290,114 @@ L.control.layers(baseMaps, overlayMaps, {
 //Making a correlation matrix
 
 // Dimension of the whole chart. Only one size since it has to be square
-var marginWhole = {top: 10, right: 10, bottom: 10, left: 10},
-    sizeWhole = 640 - marginWhole.left - marginWhole.right
+const marginWhole = {top: 10, right: 10, bottom: 10, left: 10},
+sizeWhole = 640 - marginWhole.left - marginWhole.right
 
 // Create the svg area
-var svg = d3.select("#my_dataviz")
-  .append("svg")
-    .attr("width", sizeWhole  + marginWhole.left + marginWhole.right)
-    .attr("height", sizeWhole  + marginWhole.top + marginWhole.bottom)
-  .append("g")
-    .attr("transform", "translate(" + marginWhole.left + "," + marginWhole.top + ")");
+const svg = d3.select("#my_dataviz")
+.append("svg")
+.attr("width", sizeWhole  + marginWhole.left + marginWhole.right)
+.attr("height", sizeWhole  + marginWhole.top + marginWhole.bottom)
+.append("g")
+.attr("transform", `translate(${marginWhole.left},${marginWhole.top})`);
 
 
-  // What are the numeric variables in this dataset? How many do I have
-  var allVar = ["asthma_rate_per_100k", "cancer_rate_per_100k", "hlt_outcome_z", "Total_number_of_sites"]
-  var numVar = allVar.length
+// What are the numeric variables in this dataset? How many do I have
+const allVar = ["asthma_rate_per_100k", "cancer_rate_per_100k", "hlt_outcome_z", "Total_number_of_sites"]
+const numVar = allVar.length
 
-  // Now I can compute the size of a single chart
-  mar = 20
-  size = sizeWhole / numVar
-
-
-  // ----------------- //
-  // Scales
-  // ----------------- //
-
-  // Create a scale: gives the position of each pair each variable
-  var position = d3.scalePoint()
-    .domain(allVar)
-    .range([0, sizeWhole-size])
-
-  // Color scale: give me a specie name, I return a color
-  var color = d3.scaleOrdinal()
-    .domain(["setosa", "versicolor", "virginica" ])
-    .range([ "#402D54", "#D18975", "#8FD175"])
-
-  let colorScale = {"asthma_rate_per_100k": "red", "cancer_rate_per_100k": "green", "hlt_outcome_z": "Blue", "Total_number_of_sites": "Purple"}
+// Now I can compute the size of a single chart
+mar = 20
+size = sizeWhole / numVar
 
 
-  // ------------------------------- //
-  // Add charts
-  // ------------------------------- //
-  for (i in allVar){
-    for (j in allVar){
+// ----------------- //
+// Scales
+// ----------------- //
 
-      // Get current variable name
-      var var1 = allVar[i]
-      var var2 = allVar[j]
+// Create a scale: gives the position of each pair each variable
+const position = d3.scalePoint()
+.domain(allVar)
+.range([0, sizeWhole-size])
 
-      // If var1 == var2 i'm on the diagonal, I skip that
-      if (var1 === var2) { continue; }
-
-      // Add X Scale of each graph
-      xextent = d3.extent(corr, function(d) { return +d[var1] })
-      var x = d3.scaleLinear()
-        .domain(xextent).nice()
-        .range([ 0, size-2*mar ]);
-
-      // Add Y Scale of each graph
-      yextent = d3.extent(corr, function(d) { return +d[var2] })
-      var y = d3.scaleLinear()
-        .domain(yextent).nice()
-        .range([ size-2*mar, 0 ]);
-
-      // Add a 'g' at the right position
-      var tmp = svg
-        .append('g')
-        .attr("transform", "translate(" + (position(var1)+mar) + "," + (position(var2)+mar) + ")");
-
-      // Add X and Y axis in tmp
-      tmp.append("g")
-        .attr("transform", "translate(" + 0 + "," + (size-mar*2) + ")")
-        .call(d3.axisBottom(x).ticks(3));
-      tmp.append("g")
-        .call(d3.axisLeft(y).ticks(3));
-
-      // Add circle
-      tmp
-        .selectAll("myCircles")
-        .data(corr)
-        .enter()
-        .append("circle")
-          .attr("cx", function(d){ return x(+d[var1]) })
-          .attr("cy", function(d){ return y(+d[var2]) })
-          .attr("r", 3)
-          //.attr("fill", function(d){ return color(d.Species)})
-    }
-  }
+// Color scale: give me a specie name, I return a color
+const color = d3.scaleOrdinal()
+.domain(["setosa", "versicolor", "virginica" ])
+.range([ "#402D54", "#D18975", "#8FD175"])
 
 
-  // ------------------------------- //
-  // Add histograms = diagonal
-  // ------------------------------- //
-  for (i in allVar){
-    for (j in allVar){
+// ------------------------------- //
+// Add charts
+// ------------------------------- //
+for (i in allVar){
+for (j in allVar){
 
-      // variable names
-      var var1 = allVar[i]
-      var var2 = allVar[j]
+  // Get current variable name
+  const var1 = allVar[i]
+  const var2 = allVar[j]
 
-      // If var1 == var2 i'm on the diagonal, otherwisee I skip
-      if (i != j) { continue; }
+  // If var1 == var2 i'm on the diagonal, I skip that
+  if (var1 === var2) { continue; }
 
-      // create X Scale
-      xextent = d3.extent(corr, function(d) { return +d[var1] })
-      var x = d3.scaleLinear()
-        .domain(xextent).nice()
-        .range([ 0, size-2*mar ]);
+  // Add X Scale of each graph
+  xextent = d3.extent(corr, function(d) { return +d[var1] })
+  const x = d3.scaleLinear()
+    .domain(xextent).nice()
+    .range([ 0, size-2*mar ]);
 
-      // Add a 'g' at the right position
-      var tmp = svg
-        .append('g')
-        .attr("transform", "translate(" + (position(var1)+mar) + "," + (position(var2)+mar) + ")");
+  // Add Y Scale of each graph
+  yextent = d3.extent(corr, function(d) { return +d[var2] })
+  const y = d3.scaleLinear()
+    .domain(yextent).nice()
+    .range([ size-2*mar, 0 ]);
 
-      // Add x axis
-      tmp.append("g")
-        .attr("transform", "translate(" + 0 + "," + (size-mar*2) + ")")
-        .call(d3.axisBottom(x).ticks(3));
+  // Add a 'g' at the right position
+  const tmp = svg
+    .append('g')
+    .attr("transform", `translate(${position(var1)+mar},${position(var2)+mar})`);
 
-      // set the parameters for the histogram
-       var histogram = d3.histogram()
-           .value(function(d) { return +d[var1]; })   // I need to give the vector of value
-           .domain(x.domain())  // then the domain of the graphic
-           .thresholds(x.ticks(15)); // then the numbers of bins
+  // Add X and Y axis in tmp
+  tmp.append("g")
+    .attr("transform", `translate(0,${size-mar*2})`)
+    .call(d3.axisBottom(x).ticks(3));
+  tmp.append("g")
+    .call(d3.axisLeft(y).ticks(3));
 
-       // And apply this function to data to get the bins
-       var bins = histogram(corr);
+  // Add circle
+  tmp
+    .selectAll("myCircles")
+    .data(corr)
+    .join("circle")
+      .attr("cx", function(d){ return x(+d[var1]) })
+      .attr("cy", function(d){ return y(+d[var2]) })
+      .attr("r", 3)
+      //.attr("fill", function(d){ return color(d.Species)})
+}
+}
 
-       // Y axis: scale and draw:
-       var y = d3.scaleLinear()
-            .range([ size-2*mar, 0 ])
-            .domain([0, d3.max(bins, function(d) { return d.length; })]);   // d3.hist has to be called before the Y axis obviously
-      console.log(var2)
-       // append the bar rectangles to the svg element
-       tmp.append('g')
-          .selectAll("rect")
-          .data(bins)
-          .enter()
-          .append("rect")
-             .attr("x", 1)
-             .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
-             .attr("width", function(d) { return x(d.x1) - x(d.x0)  ; })
-             .attr("height", function(d) { return (size-2*mar) - y(d.length); })
-             .text(var2)
-             .style("fill", colorScale[var2]) //"#b8b8b8"
-             .attr("stroke", "white")        
-    }
-  }
+
+// ------------------------------- //
+// Add variable names = diagonal
+// ------------------------------- //
+for (i in allVar){
+for (j in allVar){
+  // If var1 == var2 i'm on the diagonal, otherwisee I skip
+  if (i != j) { continue; }
+  // Add text
+  const var1 = allVar[i]
+  const var2 = allVar[j]
+  svg
+    .append('g')
+    .attr("transform", `translate(${position(var1)},${position(var2)})`)
+    .append('text')
+      .attr("x", size/2)
+      .attr("y", size/2)
+      .text(var1)
+      .attr("text-anchor", "middle")
+
+}
+}
+
 
 }; //end of mapMN
 
