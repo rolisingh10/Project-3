@@ -2,9 +2,24 @@
 
 # Kendal Bergman, Joanna DeLaune, Greg Michalak, Aaron Otto, Roli Singh
 
-This project is a full-stack web application that examines the relationship between the presence and concentration of EPA Facility Registry Service (FRS) -monitored sites in Minnesota and health outcomes in each county, as well as asthma and cancer rates by county.
+This project is a full-stack web application that examines the relationship between the presence and concentration of EPA Facility Registry Service (FRS) -monitored sites in Minnesota and health outcome and health factor scores in each county, as well as asthma and cancer rates by county.
 
-(more details here about analysis including some screenshots of the visualizations)
+The full website is available here: https://rolisingh10.github.io/Project-3/
+
+The primary visualization shows a heatmap of the sites we selected as relevant to our analysis, and users can select a county either by clicking on it or via drop-down menu to see statistics particular to that county.
+
+![image](https://github.com/rolisingh10/Project-3/assets/102549713/01f106ef-5d91-4831-8e9f-29ab9300c42d)
+
+Secondary visualizations are a bar graph and a correlation matrix.
+
+Users can select a statistic and view a bar graph that selects and displays the 20 "worst" states for that metric:
+
+![image](https://github.com/rolisingh10/Project-3/assets/102549713/3b9542da-f3c7-497a-bf03-74f0c6361948)
+
+The correlation matrix compares the Asthma Rate, Cancer Rate, Health Outcome Z-Score, and Number of Sites in each county.
+
+![image](https://github.com/rolisingh10/Project-3/assets/102549713/d112f433-28ea-4eef-9989-96f16f458d22)
+
 
 # Build Process
 ![Project_Process](https://github.com/rolisingh10/Project-3/assets/102549713/3e60bdc1-331c-437b-afe8-8c75fb867158)
@@ -27,7 +42,7 @@ We jsonified all four of the datasets to be ingested into the MongoDB database.
 
 **MongoDB**
 
-We wrote Python code (see Jupyter notebook file 'Make_DB_file_v1a.ipynb') to create a MongoDB database and populate it with our data.  The PyMongo scripts will load all data sets located in Project_3_Data file.  The PyMongo was writen to be able to add multiple new features and files by adding a file path and var name for each new file needing loading.  The notebook will print out meta examples of each file and their corresponding structures for purposes of the API developer and others understanding. 
+We wrote Python code (see Jupyter notebook file 'Step_2_Make_DB_file.ipynb') to create a MongoDB database and populate it with our data.  The PyMongo scripts will load all data sets located in Project_3_Data file.  The PyMongo was writen to be able to add multiple new features and files by adding a file path and var name for each new file needing loading.  The notebook will print out meta examples of each file and their corresponding structures for purposes of the API developer and others understanding. 
 
 Step 1: Imports libraries and creates the mongodb client as well as database is named.  
 Step 2: Loads all the corresponding files through a for loop. This is the step where we can add any feature or other file in with one line of code.  
@@ -36,7 +51,7 @@ Step 4: Merges the the feature files into one Json for API cosumption. Prints ou
 
 **Flask API**
 
-We created a Flask API (see 'pimn_api.py') to get both datasets from the MongoDB database and expose them to be acquired via web browser.
+We created a Flask API (see 'Step_3_pimn_api.py') to get both datasets from the MongoDB database and expose them to be acquired via web browser.
 
 Since the EPA FRS sites have longitude and latitude specified, we wrote a function to transform this dataset to geoJSON format for added functionality in the next step.
 
