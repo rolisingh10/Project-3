@@ -18,8 +18,7 @@ Users can select a statistic and view a bar graph that selects and displays the 
 
 The correlation matrix compares the Asthma Rate, Cancer Rate, Health Outcome Z-Score, and Number of Sites in each county.
 
-![image](https://github.com/rolisingh10/Project-3/assets/102549713/d112f433-28ea-4eef-9989-96f16f458d22)
-
+![image](https://github.com/rolisingh10/Project-3/assets/102549713/b5741af1-b692-4370-8603-286f8616fced)
 
 # Build Process
 ![Project_Process](https://github.com/rolisingh10/Project-3/assets/102549713/3e60bdc1-331c-437b-afe8-8c75fb867158)
