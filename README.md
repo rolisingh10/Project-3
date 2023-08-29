@@ -25,18 +25,18 @@ The correlation matrix compares the Asthma Rate, Cancer Rate, Health Outcome Z-S
 
 **Data Sourcing and Cleaning**
 
-We located and evaluated appropriate datasets and cleaned the data for ingestion into the database layer. We wanted to study the effects of environmental pollution on the health of residents. We wanted to study these effects locally, so we chose Minnesota and we further divided the state into counties. After narrowing down, we decided to include asthma and cancer as the ailments. We also included the health outcome and health factors scores of each county, which are calculated by County Health Rankings & Roadmaps (CHR&R), University of Wisconsin Population Health Institute. The datasets of the health outcome and health factors included Z-scores which show how the data is distributed. We also chose to use the U.S. Environmental Protection Agency (EPA) Federal Registry Service (FRS) website to find EPA-regulated facilities within Minnesota. These sites range from very small quantity generators of air pollutants to large coal or nuclear power plants to community water treatment systems to superfund sites -- but they are all subject to at least one environmental regulation under the purview of the U.S. EPA. 
+We located and evaluated appropriate datasets and cleaned the data for ingestion into the database layer. We wanted to study the effects of environmental pollution on the health of residents. We wanted to study these effects locally, so we chose Minnesota and divided the state into counties. After narrowing down, we decided to include asthma and cancer as the ailments. We also included the health outcome and health factors scores of each county, which are calculated by County Health Rankings & Roadmaps (CHR&R), University of Wisconsin Population Health Institute. The datasets with the health outcome and health factors included Z-scores which show how the data is distributed. We also chose to use the U.S. Environmental Protection Agency (EPA) Federal Registry Service (FRS) website to find EPA-regulated facilities within Minnesota. These sites range from very small quantity generators of air pollutants to large coal or nuclear power plants to community water treatment systems to superfund sites -- but they are all subject to at least one environmental regulation under the purview of the U.S. EPA. 
 
 We extracted four datasets for our study. These are as follows:
 
-Asthma hospitalization rates for 2018-2020 by county
-Cancer rates by county 2015-2019
-Health Outcomes and Factors Rankings 2023
-EPA FRS Sites in Minnesota
+* Asthma hospitalization rates for 2018-2020 by county
+* Cancer rates by county 2015-2019
+* Health Outcomes and Factors Rankings 2023
+* EPA FRS Sites in Minnesota
 
 **The steps taken in data cleaning:**
 
-We extracted the CSV files of asthma data and cancer rate data and transformed them into dataframes using Pandas (python). The same was done to the excel file of health outcomes. We looked at all the columns in the dataframe. We looked for null values, dropped the columns and renamed columns. The EPA dataset was extracted as a CSV after a query of the EPA FRS website. The CSV file was read into pandas via python and transformed into a dataframe. From there the data needed to be cleaned (certain columns dropped, column names changed, data filtered, etc.). The main cleaning that needed to be done on the EPA site data was to filter down to sites that we believed to be most relevant for the project. The original dataset has over 200,000 sites, and our final dataset has just under 3,000. We filtered out entries with no geographic data, as well as filtering by "Interest Types." Determining which interest types would be most relevant to cancer and asthma rates was largely subjective, and we could spend weeks defining how to best define the sites we think have the greatest impact. 
+We extracted the CSV files with asthma data and cancer rate data and transformed them into dataframes using Pandas (python). The same was done to the excel file of health outcomes. We looked at all the columns in the dataframe. We looked for null values, dropped the columns and renamed columns. The EPA dataset was extracted as a CSV after a query of the EPA FRS website. The CSV file was read into pandas via python and transformed into a dataframe. From there the data needed to be cleaned (certain columns dropped, column names changed, data filtered, etc.). The main cleaning that needed to be done on the EPA site data was to filter down to sites that we believed to be most relevant for the project. The original dataset has over 200,000 sites, and our final dataset has just under 3,000. We filtered out entries with no geographic data, as well as filtering by "Interest Types." Determining which interest types would be most relevant to cancer and asthma rates was largely subjective, and we could spend weeks defining how to best define the sites we think have the greatest impact. 
 
 We jsonified all four of the datasets to be ingested into the MongoDB database. 
 
@@ -51,7 +51,7 @@ Step 4: Merges the the feature files into one Json for API cosumption. Prints ou
 
 **Flask API**
 
-We created a Flask API (see 'Step_3_pimn_api.py') to get both datasets from the MongoDB database and expose them to be acquired via web browser.
+We created a Flask API (see '[Step_3_pimn_api.py](https://github.com/rolisingh10/Project-3/blob/main/Step_3_pimn_api.py)') to get both datasets from the MongoDB database and expose them to be acquired via web browser.
 
 Since the EPA FRS sites have longitude and latitude specified, we wrote a function to transform this dataset to geoJSON format for added functionality in the next step.
 
